@@ -2,7 +2,7 @@ import org.apache.tools.ant.taskdefs.condition.Os
 
 //apply plugin: 'com.android.library'
 plugins {
-    alias(libs.plugins.androidApplication)
+    alias(libs.plugins.androidLibrary)
     alias(libs.plugins.jetbrainsKotlinAndroid)
 }
 android {
@@ -13,7 +13,7 @@ android {
 
 
     defaultConfig {
-        applicationId 'org.quietmodem.Quiet'
+
         minSdkVersion 21
         targetSdkVersion 34
         versionCode 1
