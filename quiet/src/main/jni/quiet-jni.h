@@ -57,7 +57,7 @@ typedef struct {
     // scratch is a mono floating point buffer that we can give to
     // quiet_decoder_consume
     float *scratch;
-    ssize_t (*produce)(void *, float *, size_t);
+    ssize_t (*produce)(quiet_lwip_interface *, quiet_sample_t *, size_t);
     void *produce_arg;
 } quiet_opensl_producer;
 
@@ -80,7 +80,7 @@ typedef struct {
     // scratch is a mono floating point buffer that we can give to
     // quiet_decoder_consume
     float *scratch;
-    void (*consume)(void *, const float *, size_t);
+    void (*consume)(quiet_lwip_interface *, quiet_sample_t *, size_t);
     void *consume_arg;
 } quiet_opensl_consumer;
 

@@ -1,6 +1,6 @@
 #include "quiet-jni.h"
 
-void quiet_android_record_callback(void *dec_v, const float *buf, size_t num_frames) {
+void quiet_android_record_callback(quiet_lwip_interface *dec_v, quiet_sample_t *buf, size_t num_frames) {
     quiet_decoder *d = (quiet_decoder *)dec_v;
     quiet_decoder_consume(d, buf, num_frames);
 }

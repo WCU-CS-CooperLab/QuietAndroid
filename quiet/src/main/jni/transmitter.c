@@ -1,6 +1,6 @@
 #include "quiet-jni.h"
 
-ssize_t quiet_android_playback_callback(void *enc_v, float *buf, size_t num_frames) {
+ssize_t quiet_android_playback_callback(quiet_lwip_interface *enc_v, quiet_sample_t *buf, size_t num_frames) {
     quiet_encoder *e = (quiet_encoder *)enc_v;
     return quiet_encoder_emit(e, buf, num_frames);
 }
