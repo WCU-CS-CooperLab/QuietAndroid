@@ -9,7 +9,7 @@ android {
     namespace 'org.quietmodem.Quiet'
     compileSdk 34
     ndkVersion "27.0.11902837"
-    ndkPath "/Users/dcooper/Library/Android/sdk/ndk/27.0.11902837"
+    
 
 
     defaultConfig {
